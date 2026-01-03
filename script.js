@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 /* DEVICE */
 const isMobile = window.innerWidth < 768;
 canvas.width = isMobile ? window.innerWidth : 1200;
-canvas.height = isMobile ? window.innerHeight * 0.75 : 600;
+canvas.height = isMobile ? window.innerHeight * 0.9 : 600;
 
 /* IMAGES */
 const bgImg = new Image();
@@ -57,7 +57,7 @@ let bestScore = localStorage.getItem("bestScore") || 0;
 document.getElementById("bestScore").innerText = bestScore;
 
 /* SCALE */
-const SCALE = isMobile ? 2.2 : 1.3;
+const SCALE = isMobile ? 2.8 : 1.3;
 
 /* GROUND */
 const groundY = canvas.height - (isMobile ? 160 : 120);
@@ -89,8 +89,8 @@ function initPlayer() {
   player = {
     x: 120,
     y: groundY - 120 * SCALE,
-    w: 120 * SCALE,
-    h: 120 * SCALE,
+    w: 140 * SCALE,
+    h: 140 * SCALE,
     dy: 0,
     grounded: true,
     jumpPower: -24 * SCALE
